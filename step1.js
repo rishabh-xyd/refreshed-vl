@@ -15,7 +15,7 @@
    var dropimg1=document.querySelector("#drop1")
    var funnel2=document.querySelector("#funnel2")
    var dropimg2=document.querySelector("#drop2")
-   var conicalwater=document.querySelector("#conical-water")
+//    var conicalwater=document.querySelector("#conical-water")
    var emptpipette=document.querySelector("#emptypippete")
    var emptpipette2=document.querySelector("#emptypipette2")
     var filledpipette=document.querySelector("#filledpippete")
@@ -24,40 +24,54 @@
     var blackdrop=document.querySelector("#blackTdrop")
     var filledblackpipt=document.querySelector("#blackTpipett")
     var coneflsk1=document.getElementById("conical-flask1");        //filled flask
-    var coneflsk2=document.getElementById("conical-flask2");        //red-vien flask
+    var coneflsk2=document.querySelector("#conicalflask2");        //red-vien flask
     var DropsInsideConical=document.querySelector("#dropsInsideConical")
+    var textOFinstructions=document.getElementById("message-text")
+    var e=0; // english instuctions variable
+    var h=0;    // hindi instuctions variable
 
-    var s=0;
     function englang(){
-        if(s==0){
+        if(e==0){
             languageSelctorPage.style.display = "none";
             setTimeout(() => {
                 languageSelctorPage.style.opacity="0"
             }, 500);
             // message will be english
             
-            s+=1;
+            textOFinstructions.textContent = "Click on the HARD WATER SAMPLE BEAKER to start the Experiment";
         }
+        e+=1;
         
         
     }
     function hindilang(){
-        if(s==0){
+        if(h==0){
             languageSelctorPage.style.display = "none";
-            s+=1;
-            // var f=0;
+       
+            textOFinstructions.textContent = "प्रयोग शुरू करने के लिए हार्ड पानी नमूना बीकर पर क्लिक करें";
         }
+        h+=1;
     }
     
     var f=0;
 
+    // if(h==1){
+    //     textOFinstructions.textContent = "";
+    //     h+=1;
+    // }
 
 
-    var textOFinstructions=documnet.querySelector("#message-text")
-
-    // textOFinstructions.textContent = "Click on the Hard Water Sample Beaker to start the Experiment";
 function movehardwater(){
-    //movement of hardwater to measuring cylinder
+    // textOFinstructions.style.color="blue"
+    if(e==1){
+        textOFinstructions.textContent = "100ml of Hard Water is poured inside the MESURING CYLINDER.";
+        e+=1;
+    }
+    if(h==1){
+        textOFinstructions.textContent = "मापने वाले सिलेंडर के अंदर 100ml कठोर पानी डाला जाता है।";
+        h+=1;
+    }
+    // movement of hardwater to measuring cylinder
     if(f==0){
         // textOFinstructions.textContent = "100ml of Hard Water is poured inside the Measuring Cylinder.";
         beakermove.style.transform= "translate(-25%,-180%) rotate(-60deg)"
@@ -71,7 +85,16 @@ function movehardwater(){
                     beakermove.style.transform= "translate(0%,0%) rotate(0deg)"
                     funnelimg1.style.opacity="0"
                     dropimg1.style.opacity="0"
-                    textOFinstructions.textContent = "100ml of Hard Water is poured inside the Measuring Cylinder.";
+
+                    if(e==2){
+                        
+                        textOFinstructions.textContent = "Now click on MESURING CYLINDER";
+                        e+=1;
+                    }
+                    if(h==2){
+                        textOFinstructions.textContent = "अब मेसर्जिंग सिलेंडर पर क्लिक करें";
+                        h+=1;
+                    }
                 },1400)
             },1400)
         },2400)
@@ -79,11 +102,26 @@ function movehardwater(){
         f+=1;
     }
 }
-    
+
 
     function movecyldr(){
         // movement of measuring cylinder to conical flask
       if(f==1){
+        if(e==3){
+            textOFinstructions.textContent = "The 100ml of Hardwater is poured from MESURING CYLINDER insde the CONICAL FLASK";
+                     e+=1;
+        }
+        if(h==3){
+            textOFinstructions.textContent = "100ml हार्डवाटर को CONICAL FLASK के सिलेंडर से डाला जाता है";
+            h+=1;
+        }
+
+
+
+
+
+
+
         measurmove.style.transform="translate(-20%, -40%) rotate(-60deg)"
         measurwater.style.transform="translate(100%, -115.5%) rotate(-60deg)"
         funnel2.style.opacity="100"
@@ -99,6 +137,25 @@ function movehardwater(){
             setTimeout(() => {
                 DropsInsideConical.style.opacity="0"
                 coneflsk1.src="assets/filled volumetric-flask.png"
+
+
+
+
+
+                if(e==4){
+ 
+                    textOFinstructions.textContent = "Now click on the DROPER";
+                    e+=1;
+                }
+                if(h==4){
+                    textOFinstructions.textContent = "अब ड्रॉपर पर क्लिक करें";
+                    h+=1;
+                }
+
+
+
+
+
             }, 1400);
            
         },1400)
@@ -113,7 +170,7 @@ function movehardwater(){
       measurwater.style.transform="translate(0%, 0%) rotate(0deg)"
         funnel2.style.visibility="hidden";
         dropimg2.style.visibility="hidden";
-        conicalwater.style.visibility="visible";
+        // conicalwater.style.visibility="visible";
 },3000) 
 f+=1;
       }
@@ -123,6 +180,21 @@ f+=1;
     function emptypipettee(){
     if(f==2){
         //droper(pipette) hawaw mei le jane ke liye
+
+
+        if(e==5){
+ 
+            
+            textOFinstructions.textContent = "3-4 drops of BUFFER SOLUTION are dropped inside the CONICAL FLASK with the help of droper";
+            e+=1;
+        }
+        if(h==5){
+            textOFinstructions.textContent = "बफर सोल्यूशन की 3-4 बूंदें ड्रॉपर की मदद से CONICAL FLASK के अंदर गिराई जाती हैं";
+            h+=1;
+        }
+
+
+        
         emptpipette.style.transform= "translate(-1500%,-70%) rotate(-90deg)"
     
     setTimeout(function(){
@@ -169,6 +241,27 @@ f+=1;
                                     emptpipette.style.transform= "translate(-1500%, 263.55%) rotate(-90deg) "
                                     emptpipette.style.opacity="0"
                                     emptpipette2.style.opacity="100"
+
+
+
+
+
+                                    if(e==6){
+ 
+            
+                                        textOFinstructions.textContent = "Now click on the another droper";
+                                        
+                                        e+=1;
+                                    }
+                                    if(h==6){
+                                        textOFinstructions.textContent = "अब दूसरे ड्रॉपर पर क्लिक करें";
+                                        h+=1;
+                                    }
+                            
+
+
+
+
                                }, 1400);
 
                                 
@@ -192,6 +285,24 @@ f+=1;
 
    function emptypipettee2(){
     if(f==3){
+
+
+        if(e==7){
+ 
+            
+            textOFinstructions.textContent = "3-4 drops of EBT INDICATOR are dropped inside the CONICAL FLASK with the help of droper";
+            
+            
+            e+=1;
+        }
+        if(h==7){
+            textOFinstructions.textContent = "EBT INDICATOR की 3-4 बूंदें ड्रॉपर की मदद से CONICAL FLASK के अंदर गिराई जाती हैं";
+            h+=1;
+        }
+
+
+
+
         emptpipette2.style.transform="translate(-1500%, -300%) rotate(-90deg)"
         setTimeout(function(){
             emptpipette2.style.transform="translate(-750%, -300%) rotate(-90deg)"
@@ -211,6 +322,16 @@ f+=1;
                                 filledblackpipt.style.transform="translate(-3750%, -27%)"
                                 // emptpipette2.style.transitionDuration="0s"
                                 // filledblackpipt.style.transitionDuration="0.9s"
+                                if(e==8){
+                                                    
+                                                    
+                                    textOFinstructions.textContent = "You will observe that the water of conical flask turns red";
+                                    e+=1;
+                                }
+                                if(h==8){
+                                    textOFinstructions.textContent = "आप देखेंगे कि शंक्वाकार फ्लास्क का पानी लाल हो जाता है";
+                                    h+=1;
+                                }
                                 setTimeout(() => {
                                     filledblackpipt.style.opacity="0"
                                     emptpipette2.style.opacity="100"
@@ -222,10 +343,36 @@ f+=1;
                                         setTimeout(() => {
                                             
                                             
-                                            // emptpipette2.style.transform="translate(700%, -100%)" //bug here
+
+                                            // setTimeout(() => {
+                                            //     var coneflsk2 = document.getElementById("conicalflask2");
+                                            //     if (coneflsk2) {
+                                            //         coneflsk2.src = "assets/volumetric-flask.png";
+                                            //         emptpipette2.style.opacity = "0";
+                                            //         textOFinstructions.textContent = "Click on next button for the step 2 of the experiment";
+                                            //     } else {
+                                            //         console.error("Element with ID 'conicalflask2' not found.");
+                                            //     }
+                                            // }, 400);
+                                            
                                             setTimeout(function()  {
-                                                coneflsk2.src="assets/redvine volumetric-flask.png"
+                                                // coneflsk2.src="D:\vl\refreshed vl\assets\volumetric-flask.png"
+                                                coneflsk1.src = "assets/redvine volumetric-flask.png"
+                                                // emptpipette2.style.transform="translate(700%, -100%)" //bug here
                                                 emptpipette2.style.opacity="0"
+
+
+                                                if(e==9){
+                                                    
+                                                    
+                                                    textOFinstructions.textContent = "Click on next button for the step 2 of the experiment";
+                                                    e+=1;
+                                                }
+                                                if(h==9){
+                                                    textOFinstructions.textContent = "प्रयोग के चरण 2 के लिए अगले बटन पर क्लिक करें";
+                                                    h+=1;
+                                                }
+                                        
 
                                             }, 400);
                                         }, 200);
@@ -241,6 +388,7 @@ f+=1;
 f+=1;
 }
 
+
 var nextbutton =document.getElementById("next-button")
 function next1(){
     if(f==4){
@@ -252,16 +400,17 @@ function next1(){
             // Navigate to the destination page
             window.location.href = "step2.html";
             f+=1;
+            
+            
+        }
         
-
-
     }
 
-}
-var textOFinstructions=document.querySelector("#Message")
 
 
 
-      
+    // export const e = 9;
+    // export const h = 9;
+    // export const f = 5;
 
 

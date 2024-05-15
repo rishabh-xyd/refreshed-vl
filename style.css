@@ -135,7 +135,7 @@ html,body,.main {
     height: 80%;
     width: 90%;  
     position: relative;
-    text-align: center;
+    /* text-align: center; */
     margin-left: 5%;
     margin-top: 5%;
     margin-right: 5%;
@@ -146,18 +146,23 @@ html,body,.main {
     overflow: hidden;
     white-space: normal;
     overflow: hidden;
+    font-size: x-large;
+    font-weight: 600;
+    
+    position: relative;
+    top: 20%;
    
    
-    animation: typing 4s steps(10, end) forwards;
+    /* animation: typing 4s steps(10, end) forwards; */
 }
-@keyframes typing {
+/* @keyframes typing {
     from {
       width: 0;
     }
     to {
       width: 80%;
     }
-  }
+  } */
 #image {
     height: 100.1%;
     width: 100.1%;
