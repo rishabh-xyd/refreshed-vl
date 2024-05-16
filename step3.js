@@ -144,7 +144,7 @@ function buretteTAProtate(){
                             if(e==27){
                                                          
                                                          
-                                textOFinstructions.textContent = "You will now observe that the both the conical flask are turned to blue color which proves that the water does not contain any hardness.\n Hence the experiment is successfull.\n Develped by:Rishabh Singh";
+                                textOFinstructions.textContent = "You will now observe that the both the conical flask are turned to blue color which proves that the water does not contain any hardness.\n Hence the experiment is successfull.\n !!Thank You!!";
                                 e+=1;
                             }
                             if(h==27){
