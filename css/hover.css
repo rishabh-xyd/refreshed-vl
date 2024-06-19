@@ -1,0 +1,121 @@
+.hover-text {
+    position: absolute;
+    
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity  ease;
+    text-align: center;
+}
+
+.hardwater:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 50%;
+    left: 44%;
+    
+    
+}
+.measuringcylinder:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 45%;
+    left: 37%;
+
+    
+}
+
+.conicalfalsk:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 52%;
+    left: 30%;
+    
+    
+}
+
+.buffersolution:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 52%;
+    left: 52%;
+
+    
+}
+.blacktea:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 52%;
+    left: 60%;
+    
+    
+}
+.dropper:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 83%;
+    left: 47%;   
+}
+.columnstandh:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 20%;
+    left: 20%;   
+}
+
+.hardwaterbeaker:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 52%;
+    left: 43%;   
+}
+.bufferSolution:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 52%;
+    left: 57%;   
+}
+.EBt:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 52%;
+    left: 50%;   
+}
+.conical:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 52%;
+    left: 36%;   
+}
+.Drophover:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 65%;
+    left: 28%;   
+}
+.EDTA:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 52%;
+    left: 33%;   
+}
+.Blueflask:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 52%;
+    left: 47%;   
+}
+.redflask:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 52%;
+    left: 41%;   
+}
+.burettestand:hover .hover-text {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: 35%;
+    left: 23%;   
+}

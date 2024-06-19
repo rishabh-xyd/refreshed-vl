@@ -43,7 +43,8 @@ var textOFinstructions=document.getElementById("message-text")
 var f=5;
 var e=9;
 var h=100;
-
+// var f;
+// import { f,e,h } from "./step1.js";
 if(e==9){
                                                     
                                                     

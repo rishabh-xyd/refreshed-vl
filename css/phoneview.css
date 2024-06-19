@@ -1,0 +1,84 @@
+/* iPhone SE (320px width) */
+@media only screen and (max-width: 425px)  {
+
+    
+
+    .header {
+        border: 1px solid rgb(0, 0, 0);
+        padding: 0.1rem;
+        background: #27344b;
+        height: 3vh; /* Changed from percentage to viewport height for better responsiveness */
+        width: 100%;
+        color: rgb(235, 227, 227);
+    }
+    .header h1 {
+        font-size: 0.25em; /* Adjusted to 3em as a base size */
+    }
+    .super-container {
+        display: flex;
+        height: 24.5vh;
+        width: 100%;
+        position: relative;
+        margin-top: 0%;
+        margin-left: 0%;
+        /* background-color: aqua; */
+    }
+    .simulate {
+        border: 1px solid black;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 78%;
+        top: 1%;
+        left: 1%;
+    }
+    #ins
+    {
+        font-size: 0.2em;
+    }
+    #text{
+        font-size: 3px;
+        
+    }
+    #message-box{
+    
+        
+        /* align-self: center; */
+        border: 3px solid black;
+        background-color:white;
+        height: 80%;
+        width: 90%;  
+        position: relative;
+        
+    }
+    #next-button {
+        position: absolute;
+        padding: 5px;
+        font-size: 7px;
+        line-height: 0em;
+        left: 67%;
+        top: 7%;
+        border: 1px solid black;
+        border-radius: 80rem;
+        font-weight: 500;
+
+    }
+    #message-text{
+        display:inline-block;
+        overflow: hidden;
+        white-space: normal;
+        overflow: hidden;
+        font-size: 50%;
+        font-weight: 600;
+        
+        position: relative;
+        top: 20%;
+       
+       
+       
+    }
+
+
+}
+
+

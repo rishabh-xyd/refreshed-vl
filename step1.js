@@ -29,6 +29,14 @@
     var textOFinstructions=document.getElementById("message-text")
     var e=0; // english instuctions variable
     var h=0;    // hindi instuctions variable
+    var audio;
+
+    function speak(text, lang) {
+        var utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang;
+        window.speechSynthesis.speak(utterance);
+    }
+    
 
     function englang(){
         if(e==0){
@@ -37,8 +45,10 @@
                 languageSelctorPage.style.opacity="0"
             }, 500);
             // message will be english
-            
             textOFinstructions.textContent = "Click on the HARD WATER SAMPLE BEAKER to start the Experiment";
+            setTimeout(() => {
+                speak("Click on the HARD WATER SAMPLE BEAKER to start the Experiment", "en-US")
+            }, 1400);
         }
         e+=1;
         
@@ -47,8 +57,14 @@
     function hindilang(){
         if(h==0){
             languageSelctorPage.style.display = "none";
+            textOFinstructions.textContent = "प्रयोग शुरू करने के लिए HARD WATER BEAKER पर क्लिक करें";
+            setTimeout(() => {
+                
+                speak("प्रयोग शुरू करने के लिए  पर क्लिक करें", "hi-IN")
+            }, 1400);
        
-            textOFinstructions.textContent = "प्रयोग शुरू करने के लिए हार्ड पानी नमूना बीकर पर क्लिक करें";
+       
+       
         }
         h+=1;
     }
@@ -65,10 +81,13 @@ function movehardwater(){
     // textOFinstructions.style.color="blue"
     if(e==1){
         textOFinstructions.textContent = "100ml of Hard Water is poured inside the MESURING CYLINDER.";
-        e+=1;
+        // audio = new Audio('AUDIO INSTURCTIONS/audio eng/2.mp3');
+        // audio.play();
+        // e+=1;
     }
     if(h==1){
-        textOFinstructions.textContent = "मापने वाले सिलेंडर के अंदर 100ml कठोर पानी डाला जाता है।";
+        textOFinstructions.textContent = "मापने वाले सिलेंडर के अंदर 100ml कठोर पानी डाला जाता है।", "hi-IN";
+        // var audio = new Audio('audio-file.mp3');
         h+=1;
     }
     // movement of hardwater to measuring cylinder
@@ -109,10 +128,12 @@ function movehardwater(){
       if(f==1){
         if(e==3){
             textOFinstructions.textContent = "The 100ml of Hardwater is poured from MESURING CYLINDER insde the CONICAL FLASK";
+            var audio = new Audio('audio-file.mp3');
                      e+=1;
         }
         if(h==3){
             textOFinstructions.textContent = "100ml हार्डवाटर को CONICAL FLASK के सिलेंडर से डाला जाता है";
+            var audio = new Audio('audio-file.mp3');
             h+=1;
         }
 
@@ -405,12 +426,13 @@ function next1(){
         }
         
     }
-
-
-
-
+    // window.e = 9;
+    // window.h = 9;
+    // window.f = 5;
+    
     // export const e = 9;
     // export const h = 9;
     // export const f = 5;
+
 
 
