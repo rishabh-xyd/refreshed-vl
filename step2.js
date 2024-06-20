@@ -1,17 +1,9 @@
 
+// import { f, e, h } from './file1.js';
 
-// //zomming the lab
-// document.addEventListener('DOMContentLoaded', function() {
-//     const img = document.querySelector('.lab');
-//     const zoomButton = document.getElementById('next-button');
-  
-//     zoomButton.addEventListener('click', function() {
-//       img.classList.toggle('zoomed_lab');
-      
-//     });
-
-//   });
-
+// console.log(f); // 4
+// console.log(e); // 9
+// console.log(h); // 9
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // ****************************************************************************************STEP2**********************************************************************************
@@ -43,12 +35,21 @@ var textOFinstructions=document.getElementById("message-text")
 var f=5;
 var e=9;
 var h=100;
+
+
+function speak(text, lang) {
+    var utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = lang;
+    window.speechSynthesis.speak(utterance);
+}
+
 // var f;
 // import { f,e,h } from "./step1.js";
 if(e==9){
                                                     
                                                     
     textOFinstructions.textContent = "Click on HARDWATER SAMPLE BEAKER";
+    speak("Click on HARDWATER SAMPLE BEAKER","en-US")
     e+=1;
 }
 if(h==9){
@@ -67,6 +68,7 @@ function hardwatermov(){
                                                     
                                                     
             textOFinstructions.textContent = "100ml of Hardwater is poured inside the CONICAL FLASK";
+            speak("100ml of Hardwater is poured inside the CONICAL FLASK","en-US")
             e+=1;
         }
         if(h==10){
@@ -103,6 +105,7 @@ function hardwatermov(){
                                                     
                                                     
                             textOFinstructions.textContent = "Now click on CONICAL FLASK";
+                            speak("Now click on CONICAL FLASK","en-US")
                             e+=1;
                         }
                         if(h==11){
@@ -126,6 +129,7 @@ function conicalFlaskStep2(){
                                                     
                                                     
         textOFinstructions.textContent = "100ml of hardwater is poured inside the COLUMN containing SODIUM salt from CONICAL FLASK";
+        speak("100ml of hardwater is poured inside the COLUMN containing SODIUM salt from CONICAL FLASK","en-US")
         e+=1;
     }
     if(h==12){
@@ -175,7 +179,8 @@ function conicalFlaskStep2(){
                                 if(e==13){
                                                     
                                                     
-                                    textOFinstructions.textContent = "You will observe that the ions inside the sodium salt will exhange the cations with the hard water";
+                                    textOFinstructions.textContent = "You will observe that the ions inside the sodium salt will exchange the cations with the hard water";
+                                    speak("You will observe that the ions inside the sodium salt will exchange the cations with the hard water","en-US")
                                     e+=1;
                                 }
                                 if(h==13){
@@ -203,6 +208,7 @@ function conicalFlaskStep2(){
                                                     
                                                     
                                                         textOFinstructions.textContent = "Now click on the conical flask below the Column";
+                                                        speak("Now click on the conical flask below the Column","en-US")
                                                         e+=1;
                                                     }
                                                     if(h==14){
@@ -239,6 +245,7 @@ function MOVconicalflasktoSPACE(){
                                                     
                                                     
         textOFinstructions.textContent = "The conical flask is placed on the table by shifting it from column stand";
+        speak("The conical flask is placed on the table by shifting it from column stand","en-US")
         e+=1;
     }
     if(h==15){
@@ -263,6 +270,7 @@ function MOVconicalflasktoSPACE(){
                                                     
                                                     
                     textOFinstructions.textContent = "Now click on the DROPER";
+                    speak("Now click on the DROPER","en-US")
                     e+=1;
                 }
                 if(h==16){
@@ -284,7 +292,9 @@ function piptmovhardwater(){
                                                     
                                                     
         textOFinstructions.textContent = "3-4 drops of BUFFER SOLUTION are dropped inside the CONICAL FLASK with the help of droper";
+        speak("3-4 drops of BUFFER SOLUTION are dropped inside the CONICAL FLASK with the help of droper","en-US")
         e+=1;
+        
     }
     if(h==17){
         textOFinstructions.textContent = "बफर सोल्यूशन की 3-4 बूंदें ड्रॉपर की मदद से CONICAL FLASK के अंदर गिराई जाती हैं";
@@ -330,6 +340,7 @@ function piptmovhardwater(){
                                                     
                                                     
                                                     textOFinstructions.textContent = "Now click on the another Droper";
+                                                    speak("Now click on the another Droper","en-US")
                                                     e+=1;
                                                 }
                                                 if(h==18){
@@ -362,6 +373,7 @@ function blackTpiptMOV(){
                                                     
                                                     
             textOFinstructions.textContent = "3-4 drops of EBT INDICATOR are dropped inside the CONICAL FLASK with the help of droper";
+            speak("3-4 drops of EBT INDICATOR are dropped inside the CONICAL FLASK with the help of droper","en-US")
             e+=1;
         }
         if(h==19){
@@ -395,7 +407,8 @@ function blackTpiptMOV(){
                                         if(e==20){
                                                     
                                                     
-                                            textOFinstructions.textContent = "You will observe that the wate of conical flask turns blue";
+                                            textOFinstructions.textContent = "You will observe that the water of conical flask turns blue";
+                                            speak("You will observe that the water of conical flask turns blue","en-US")
                                             e+=1;
                                         }
                                         if(h==20){
@@ -413,8 +426,8 @@ function blackTpiptMOV(){
 
                                                 if(e==21){
                                                     
-                                                    
                                                     textOFinstructions.textContent = "Click on next button for the step 3 of the experiment";
+                                                    speak("Click on next button for the step 3 of the experiment","en-US")
                                                     e+=1;
                                                 }
                                                 if(h==21){

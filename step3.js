@@ -16,11 +16,16 @@ var exitbutton =document.getElementById("next-button")
  var f=9;
  var e=22;
  var h=100;
- 
+ function speak(text, lang) {
+    var utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = lang;
+    window.speechSynthesis.speak(utterance);
+}
  if(e==22){
                                                      
                                                      
      textOFinstructions.textContent = "Now click on EDTA BEAKER";
+     speak("Now click on EDTA BEAKER","en-US")
      e+=1;
  }
  if(h==22){
@@ -38,7 +43,8 @@ function buffersolmov(){
     if(e==23){
                                                      
                                                      
-        textOFinstructions.textContent = "50ml of EDTA is poured inside the Burette";
+        textOFinstructions.textContent = "50ml of EDTA is poured inside the Burette using Funnel ";
+        speak("50ml of EDTA is poured inside the Burette using Funnel","en-US")
         e+=1;
     }
     if(h==23){
@@ -68,6 +74,7 @@ function buffersolmov(){
                                                      
                                                      
                             textOFinstructions.textContent = "Now click on the Red Vine colored conical flask";
+                            speak("Now click on the Red Vine colored conical flask","en-US")
                             e+=1;
                         }
                         if(h==24){
@@ -98,6 +105,7 @@ function redvineconicalMOV(){
                                                          
                                                          
             textOFinstructions.textContent = "Now click on the burette";
+            speak("Now click on the burette","en-US")
             e+=1;
         }
         if(h==25){
@@ -117,6 +125,7 @@ function buretteTAProtate(){
                                                          
                                                          
         textOFinstructions.textContent = "You will observe that the titration is under process and the color of the conical flask turns blue from red";
+        speak("You will observe that the titration is under process and the color of the conical flask turns blue from red","en-US")
         e+=1;
     }
     if(h==26){
@@ -145,6 +154,7 @@ function buretteTAProtate(){
                                                          
                                                          
                                 textOFinstructions.textContent = "You will now observe that the both the conical flask are turned to blue color which proves that the water does not contain any hardness.\n Hence the experiment is successfull.\n !!Thank You!!";
+                                speak("You will now observe that the both the conical flask are turned to blue color which proves that the water does not contain any hardness.\n Hence the experiment is successfull.\n !!Thank You!!","en-US")
                                 e+=1;
                             }
                             if(h==27){

@@ -29,7 +29,7 @@
     var textOFinstructions=document.getElementById("message-text")
     var e=0; // english instuctions variable
     var h=0;    // hindi instuctions variable
-    var audio;
+
 
     function speak(text, lang) {
         var utterance = new SpeechSynthesisUtterance(text);
@@ -45,10 +45,10 @@
                 languageSelctorPage.style.opacity="0"
             }, 500);
             // message will be english
-            textOFinstructions.textContent = "Click on the HARD WATER SAMPLE BEAKER to start the Experiment";
+            textOFinstructions.textContent = "Hover the instruments for better interaction and click on the Hard Water Sample Beaker to start the Experiment";
             setTimeout(() => {
-                speak("Click on the HARD WATER SAMPLE BEAKER to start the Experiment", "en-US")
-            }, 1400);
+                speak("Hover the instruments for better interaction and click on the HARD WATER SAMPLE BEAKER to start the Experiment", "en-US");
+            }, 100);
         }
         e+=1;
         
@@ -57,10 +57,10 @@
     function hindilang(){
         if(h==0){
             languageSelctorPage.style.display = "none";
-            textOFinstructions.textContent = "प्रयोग शुरू करने के लिए HARD WATER BEAKER पर क्लिक करें";
+            textOFinstructions.textContent = "उपकरणों को जानने के लिए होवर करें और प्रयोग शुरू करने के लिए HARD WATER BEAKER पर क्लिक करें";
             setTimeout(() => {
                 
-                speak("प्रयोग शुरू करने के लिए  पर क्लिक करें", "hi-IN")
+                speak("उपकरणों को जानने के लिए होवर करें और प्रयोग शुरू करने के लिए कठोर जल नमूना बीकर पर क्लिक करें", "hi-IN");
             }, 1400);
        
        
@@ -81,9 +81,10 @@ function movehardwater(){
     // textOFinstructions.style.color="blue"
     if(e==1){
         textOFinstructions.textContent = "100ml of Hard Water is poured inside the MESURING CYLINDER.";
+        speak("100ml of Hard Water is poured inside the MESURING CYLINDER.","en-US")
         // audio = new Audio('AUDIO INSTURCTIONS/audio eng/2.mp3');
         // audio.play();
-        // e+=1;
+        e+=1;
     }
     if(h==1){
         textOFinstructions.textContent = "मापने वाले सिलेंडर के अंदर 100ml कठोर पानी डाला जाता है।", "hi-IN";
@@ -108,10 +109,12 @@ function movehardwater(){
                     if(e==2){
                         
                         textOFinstructions.textContent = "Now click on MESURING CYLINDER";
+                        speak("Now click on MESURING CYLINDER","en-US")
                         e+=1;
                     }
                     if(h==2){
                         textOFinstructions.textContent = "अब मेसर्जिंग सिलेंडर पर क्लिक करें";
+                        speak("अब मेसर्जिंग सिलेंडर पर क्लिक करें","hi-IN")
                         h+=1;
                     }
                 },1400)
@@ -128,12 +131,12 @@ function movehardwater(){
       if(f==1){
         if(e==3){
             textOFinstructions.textContent = "The 100ml of Hardwater is poured from MESURING CYLINDER insde the CONICAL FLASK";
-            var audio = new Audio('audio-file.mp3');
+            speak("The 100ml of Hardwater is poured from MESURING CYLINDER insde the CONICAL FLASK","en-US")
                      e+=1;
         }
         if(h==3){
             textOFinstructions.textContent = "100ml हार्डवाटर को CONICAL FLASK के सिलेंडर से डाला जाता है";
-            var audio = new Audio('audio-file.mp3');
+            speak("100ml हार्डवाटर को CONICAL FLASK के सिलेंडर से डाला जाता है","hi-IN")
             h+=1;
         }
 
@@ -166,10 +169,12 @@ function movehardwater(){
                 if(e==4){
  
                     textOFinstructions.textContent = "Now click on the DROPER";
+                    speak("Now click on the DROPER","en-US")
                     e+=1;
                 }
                 if(h==4){
                     textOFinstructions.textContent = "अब ड्रॉपर पर क्लिक करें";
+                    speak("अब ड्रॉपर पर क्लिक करें","hi-IN")
                     h+=1;
                 }
 
@@ -207,10 +212,12 @@ f+=1;
  
             
             textOFinstructions.textContent = "3-4 drops of BUFFER SOLUTION are dropped inside the CONICAL FLASK with the help of droper";
+            speak("3-4 drops of BUFFER SOLUTION are dropped inside the CONICAL FLASK with the help of droper","en-US")
             e+=1;
         }
         if(h==5){
             textOFinstructions.textContent = "बफर सोल्यूशन की 3-4 बूंदें ड्रॉपर की मदद से CONICAL FLASK के अंदर गिराई जाती हैं";
+            speak("बफर सोल्यूशन की 3-4 बूंदें ड्रॉपर की मदद से CONICAL FLASK के अंदर गिराई जाती हैं","hi-IN")
             h+=1;
         }
 
@@ -229,6 +236,7 @@ f+=1;
                 
                 filledpipette.style.opacity="100"
 
+                emptpipette.styletransitionDuration="0s"
                 emptpipette.style.opacity ="0"
                         
                
@@ -271,11 +279,12 @@ f+=1;
  
             
                                         textOFinstructions.textContent = "Now click on the another droper";
-                                        
+                                        speak("Now click on the another droper","en-US")
                                         e+=1;
                                     }
                                     if(h==6){
                                         textOFinstructions.textContent = "अब दूसरे ड्रॉपर पर क्लिक करें";
+                                        speak("अब दूसरे ड्रॉपर पर क्लिक करें","hi-IN")
                                         h+=1;
                                     }
                             
@@ -312,12 +321,13 @@ f+=1;
  
             
             textOFinstructions.textContent = "3-4 drops of EBT INDICATOR are dropped inside the CONICAL FLASK with the help of droper";
-            
+            speak("3-4 drops of EBT INDICATOR are dropped inside the CONICAL FLASK with the help of droper","en-US")
             
             e+=1;
         }
         if(h==7){
             textOFinstructions.textContent = "EBT INDICATOR की 3-4 बूंदें ड्रॉपर की मदद से CONICAL FLASK के अंदर गिराई जाती हैं";
+            speak("EBT INDICATOR की 3-4 बूंदें ड्रॉपर की मदद से CONICAL FLASK के अंदर गिराई जाती हैं","hi-IN")
             h+=1;
         }
 
@@ -347,10 +357,12 @@ f+=1;
                                                     
                                                     
                                     textOFinstructions.textContent = "You will observe that the water of conical flask turns red";
+                                    speak("You will observe that the water of conical flask turns red","en-US")
                                     e+=1;
                                 }
                                 if(h==8){
                                     textOFinstructions.textContent = "आप देखेंगे कि शंक्वाकार फ्लास्क का पानी लाल हो जाता है";
+                                    speak("आप देखेंगे कि शंक्वाकार फ्लास्क का पानी लाल हो जाता है","hi-IN")
                                     h+=1;
                                 }
                                 setTimeout(() => {
@@ -387,10 +399,12 @@ f+=1;
                                                     
                                                     
                                                     textOFinstructions.textContent = "Click on next button for the step 2 of the experiment";
+                                                    speak("Click on next button for the step 2 of the experiment","en-US")
                                                     e+=1;
                                                 }
                                                 if(h==9){
                                                     textOFinstructions.textContent = "प्रयोग के चरण 2 के लिए अगले बटन पर क्लिक करें";
+                                                    speak("प्रयोग के चरण 2 के लिए अगले बटन पर क्लिक करें","hi-IN")
                                                     h+=1;
                                                 }
                                         
@@ -425,7 +439,11 @@ function next1(){
             
         }
         
-    }
+        }
+        // export const f = 4;
+        // export const e = 9;
+        // export const h = 9;
+        
     // window.e = 9;
     // window.h = 9;
     // window.f = 5;
@@ -433,6 +451,5 @@ function next1(){
     // export const e = 9;
     // export const h = 9;
     // export const f = 5;
-
 
 
